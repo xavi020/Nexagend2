@@ -1,0 +1,113 @@
+body {
+    background-image: url('corte.jpg'); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+body, html {
+    height: 100%;
+    margin: 0; /* Deixa sem margem para centralizar certinho */
+    padding: 0;
+    display: flex; /* FLEX para alinhar */
+    align-items: center; /* Alinha no eixo vertical */
+    justify-content: center; /* Alinha no eixo horizontal */
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-style: normal;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+/* Estilos para o contêiner do formulário */
+/* Estilos para o contêiner principal que envolve o conteúdo do formulário */
+.container {
+    background: rgba(255, 255, 255, 0.95); /* Fundo branco semi-transparente */
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+/* Estilos para os títulos */
+h1, h2 {
+    color: #4a90e2;
+    margin-bottom: 20px;
+}
+
+
+/* Estilos para os campos de input, select e button */
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Estilos específicos para o botão */
+button {
+    background-color: #4a90e2;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Estilos para o botão no hover */
+button:hover {
+    background-color: #357ABD;
+    transform: scale(1.03);
+}
+
+/* Estilos para o contêiner dos horários disponíveis */
+#horarios-disponiveis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    margin: 15px 0;
+}
+
+/* Estilo base para cada horário */
+.horario {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    box-sizing: border-box;
+}
+
+/* Estilos para horários disponíveis */
+.horario.disponivel {
+    background-color: #ffffff;
+    color: #1d773f;
+}
+
+/* Estilos para hover dos horários disponíveis */
+.horario.disponivel:hover {
+    background-color: #d4e7fe;
+}
+
+/* Estilos para horários indisponíveis */
+.horario.indisponivel {
+    background-color: #ffcccc;
+    color: #888;
+    cursor: not-allowed;
+}
+
+/* Estilos para horários selecionados */
+.horario.selecionado {
+    background-color: #4a90e2;
+    color: white;
+}
